@@ -70,6 +70,7 @@ const Winner=()=>{
             if(pos1===pos2 && pos2===pos3){
                 console.log("Winner");
                 show(pos1);
+                return true;
             }
         }
     }
