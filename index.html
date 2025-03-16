@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #acb6e5; 
+background: -webkit-linear-gradient(to right, #86fde8, #acb6e5); 
+background: linear-gradient(to right, #86fde8, #acb6e5); 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .container {
+            /* width: 375px; */
+            text-align: center;
+            background: #ee9ca7; 
+background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);  
+background: linear-gradient(to right, #ffdde17b, #ee9ca7aa); 
+
+
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .title {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .board {
+            width: 375px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 60px;
+            font-weight: bold;
+            color: #333;
+            cursor:default;
+            transition: background-color 0.3s ease;
+        }
+
+        .box:hover {
+            background-color: #ee9ca752;
+        }
+        .box1{
+            border-bottom: 5px solid gray;
+        }
+        .box2{
+            border-bottom: 5px solid gray;
+        }
+        .b1{
+            border-right: 5px solid gray;
+        }
+        .b2{
+            border-right: 5px solid gray;
+        }
+        .reset-btn {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #333;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .reset-btn:hover {
+            background-color: #555;
+        }
+        .result{
+            font-size: 60px;
+        }
+        .symbol{
+            font-size: 125px;
+        }
+        .final{
+            display: none;
+        }
+        .new-btn{
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #333;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .new-btn:hover {
+            background-color: #555;
+        }
+        .main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+        }
+        .disable{
+            pointer-events: none;
+        }
+        .main1{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .X{
+            color: rgb(235, 58, 58);
+        }
+        .O{
+            color: rgb(104, 104, 214);
+        }
+        .winning-box{
+            text-decoration: line-through;
+        }
+        .header{
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            padding: 20px;
+            padding-left: 40px;
+            gap: 10px;
+        }
+        .header p{
+            color: #f90909;
+            font-size: 25px;
+            font-weight: 600;
+            font-family:'Times New Roman', Times, serif;
+        }
+        img{
+            width: 35px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <img src="./tic.png" alt="">
+        <p>Xs & Os</p>
+    </div>
+    <div class="container">
+        <h1 class="title">Let's Play</h1>
+        <div class="main">
+            <div class="main1">
+                <div class="board">
+                    <div class="box box1 b1" id="bb"></div>
+                    <div class="box box1 b2" id="bb"></div>
+                    <div class="box box1" id="bb"></div>
+                    <div class="box box2 b1" id="bb"></div>
+                    <div class="box box2 b2" id="bb"></div>
+                    <div class="box box2" id="bb"></div>
+                    <div class="box box3 b1" id="bb"></div>
+                    <div class="box box3 b2" id="bb"></div>
+                    <div class="box box3" id="bb"></div>
+                </div>
+                <button class="reset-btn" id="restart">Restart The Game</button>
+            </div>
+            <div class="final" id="final">
+                <p class="symbol" id="symbol">X</p>
+                <h2 class="result" id="result">Winner!</h2>
+                <button class="new-btn" id="new">Play Again</button>
+            </div>
+        </div>
+        <script src="Tac.js"></script>
+    </div>
+</body>
+
+</html>
