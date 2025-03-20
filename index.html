@@ -6,16 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic-Tac-Toe</title>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             font-family: 'Arial', sans-serif;
-            background: #acb6e5; 
-background: -webkit-linear-gradient(to right, #86fde8, #acb6e5); 
-background: linear-gradient(to right, #86fde8, #acb6e5); 
+            background-color: #8AAAE5;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -24,13 +23,8 @@ background: linear-gradient(to right, #86fde8, #acb6e5);
         }
 
         .container {
-            /* width: 375px; */
             text-align: center;
-            background: #ee9ca7; 
-background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);  
-background: linear-gradient(to right, #ffdde17b, #ee9ca7aa); 
-
-
+            background-color: #ffffff;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -40,6 +34,7 @@ background: linear-gradient(to right, #ffdde17b, #ee9ca7aa);
             color: #333;
             margin-bottom: 20px;
         }
+
         .board {
             width: 375px;
             display: flex;
@@ -58,21 +53,26 @@ background: linear-gradient(to right, #ffdde17b, #ee9ca7aa);
             font-size: 60px;
             font-weight: bold;
             color: #333;
-            cursor:default;
+            cursor: default;
             transition: background-color 0.3s ease;
         }
-        .box1{
+
+        .box1 {
             border-bottom: 5px solid gray;
         }
-        .box2{
+
+        .box2 {
             border-bottom: 5px solid gray;
         }
-        .b1{
+
+        .b1 {
             border-right: 5px solid gray;
         }
-        .b2{
+
+        .b2 {
             border-right: 5px solid gray;
         }
+
         .reset-btn {
             padding: 10px 20px;
             font-size: 1rem;
@@ -87,16 +87,20 @@ background: linear-gradient(to right, #ffdde17b, #ee9ca7aa);
         .reset-btn:hover {
             background-color: #555;
         }
-        .result{
+
+        .result {
             font-size: 60px;
         }
-        .symbol{
+
+        .symbol {
             font-size: 125px;
         }
-        .final{
+
+        .final {
             display: none;
         }
-        .new-btn{
+
+        .new-btn {
             margin-top: 20px;
             padding: 10px 20px;
             font-size: 1rem;
@@ -107,34 +111,42 @@ background: linear-gradient(to right, #ffdde17b, #ee9ca7aa);
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
+
         .new-btn:hover {
             background-color: #555;
         }
-        .main{
+
+        .main {
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 40px;
         }
-        .disable{
+
+        .disable {
             pointer-events: none;
         }
-        .main1{
+
+        .main1 {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
         }
-        .X{
+
+        .X {
             color: rgb(235, 58, 58);
         }
-        .O{
+
+        .O {
             color: rgb(104, 104, 214);
         }
-        .winning-box{
+
+        .winning-box {
             text-decoration: line-through;
         }
-        .header{
+
+        .header {
             display: flex;
             justify-content: start;
             align-items: center;
@@ -142,13 +154,15 @@ background: linear-gradient(to right, #ffdde17b, #ee9ca7aa);
             padding-left: 40px;
             gap: 10px;
         }
-        .header p{
-            color: #f90909;
+
+        .header p {
+            color: #2f3c7e;
             font-size: 25px;
             font-weight: 600;
-            font-family:'Times New Roman', Times, serif;
+            font-family: 'Times New Roman', Times, serif;
         }
-        img{
+
+        img {
             width: 35px;
         }
     </style>
